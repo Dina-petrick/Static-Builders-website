@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Land Listings | Smart Builders - Luxury Plots & Development</title>
+    <meta name="description" content="Browse our exclusive collection of premium land plots and luxury development opportunities. Filter by location, price, and size to find your perfect property.">
+    <link rel="canonical" href="https://smartbuilders.com/listings">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="/" class="nav__logo">Smart Builders</a>
+            </div>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="/" class="nav__link">Home</a></li>
+                <li><a href="listings.html" class="nav__link nav__link--active">Listings</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+                <li><a href="login.html" class="nav__link">Login</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Premium Land Listings</h1>
+                <p class="page-header__subtitle">Discover exceptional plots and development opportunities</p>
+            </div>
+        </section>
+
+        <section class="listings-page section">
+            <div class="container">
+                <!-- Filters and Search -->
+                <div class="listings-filters">
+                    <div class="filters-row">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search by location..." class="search-input">
+                            <button type="button" class="search-btn" aria-label="Search">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="filter-group">
+                            <select id="locationFilter" class="filter-select">
+                                <option value="">All Locations</option>
+                                <option value="sunset-valley">Sunset Valley</option>
+                                <option value="crystal-lake">Crystal Lake</option>
+                                <option value="alpine-heights">Alpine Heights</option>
+                                <option value="riverside">Riverside</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select id="priceFilter" class="filter-select">
+                                <option value="">All Prices</option>
+                                <option value="0-500000">Under $500K</option>
+                                <option value="500000-1000000">$500K - $1M</option>
+                                <option value="1000000-2000000">$1M - $2M</option>
+                                <option value="2000000+">$2M+</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select id="sizeFilter" class="filter-select">
+                                <option value="">All Sizes</option>
+                                <option value="0-2">Under 2 acres</option>
+                                <option value="2-5">2-5 acres</option>
+                                <option value="5-10">5-10 acres</option>
+                                <option value="10+">10+ acres</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <select id="sortFilter" class="filter-select">
+                                <option value="newest">Newest First</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="size-large">Size: Largest First</option>
+                                <option value="featured">Featured</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Count -->
+                <div class="results-info">
+                    <p class="results-count">Showing <span id="resultsCount">12</span> properties</p>
+                </div>
+
+                <!-- Listings Grid -->
+                <div class="listings-grid" id="listingsGrid">
+                    <article class="listing-card" data-location="sunset-valley" data-price="450000" data-size="2.5">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Premium hillside plot" loading="lazy">
+                            <span class="listing-card__tag">Ready-to-build</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Hillside Premium Plot</h3>
+                            <p class="listing-card__location">Sunset Valley, Metropolitan</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">2.5 acres</span>
+                                <span class="listing-card__price">$450,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="listing-card" data-location="crystal-lake" data-price="750000" data-size="3.2">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Lakefront luxury plot" loading="lazy">
+                            <span class="listing-card__tag">Waterfront</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Lakefront Luxury Plot</h3>
+                            <p class="listing-card__location">Crystal Lake, Premium District</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">3.2 acres</span>
+                                <span class="listing-card__price">$750,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="listing-card" data-location="alpine-heights" data-price="1200000" data-size="5.0">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1029613/pexels-photo-1029613.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Mountain view estate plot" loading="lazy">
+                            <span class="listing-card__tag">Mountain View</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Mountain View Estate</h3>
+                            <p class="listing-card__location">Alpine Heights, Exclusive</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">5.0 acres</span>
+                                <span class="listing-card__price">$1,200,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="listing-card" data-location="riverside" data-price="680000" data-size="4.1">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1029641/pexels-photo-1029641.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Riverside premium development" loading="lazy">
+                            <span class="listing-card__tag">River Access</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Riverside Premium Development</h3>
+                            <p class="listing-card__location">Riverside, Luxury District</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">4.1 acres</span>
+                                <span class="listing-card__price">$680,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="listing-card" data-location="sunset-valley" data-price="320000" data-size="1.8">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1029624/pexels-photo-1029624.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Valley view residential plot" loading="lazy">
+                            <span class="listing-card__tag">Residential</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Valley View Residential</h3>
+                            <p class="listing-card__location">Sunset Valley, Residential</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">1.8 acres</span>
+                                <span class="listing-card__price">$320,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="listing-card" data-location="alpine-heights" data-price="2100000" data-size="8.5">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1029632/pexels-photo-1029632.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Alpine luxury estate" loading="lazy">
+                            <span class="listing-card__tag">Estate</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Alpine Luxury Estate</h3>
+                            <p class="listing-card__location">Alpine Heights, Ultra Premium</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">8.5 acres</span>
+                                <span class="listing-card__price">$2,100,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="listing-card" data-location="crystal-lake" data-price="890000" data-size="3.7">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1029635/pexels-photo-1029635.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Lakeside premium plot" loading="lazy">
+                            <span class="listing-card__tag">Premium</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Lakeside Premium Plot</h3>
+                            <p class="listing-card__location">Crystal Lake, Waterfront</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">3.7 acres</span>
+                                <span class="listing-card__price">$890,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="listing-card" data-location="riverside" data-price="540000" data-size="2.9">
+                        <div class="listing-card__image">
+                            <img src="https://images.pexels.com/photos/1029638/pexels-photo-1029638.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Riverside family plot" loading="lazy">
+                            <span class="listing-card__tag">Family</span>
+                        </div>
+                        <div class="listing-card__content">
+                            <h3 class="listing-card__title">Riverside Family Plot</h3>
+                            <p class="listing-card__location">Riverside, Family District</p>
+                            <div class="listing-card__details">
+                                <span class="listing-card__size">2.9 acres</span>
+                                <span class="listing-card__price">$540,000</span>
+                            </div>
+                            <a href="project-details.html" class="btn btn--outline btn--small">View Details</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination__btn pagination__btn--prev" disabled>Previous</button>
+                    <div class="pagination__numbers">
+                        <button class="pagination__number pagination__number--active">1</button>
+                        <button class="pagination__number">2</button>
+                        <button class="pagination__number">3</button>
+                    </div>
+                    <button class="pagination__btn pagination__btn--next">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Smart Builders</h3>
+                    <p class="footer__description">Premium plots and land development for luxury living and smart investment.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="/" class="footer__link">Home</a></li>
+                        <li><a href="listings.html" class="footer__link">Listings</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__heading">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Land Development</a></li>
+                        <li><a href="#" class="footer__link">Property Investment</a></li>
+                        <li><a href="#" class="footer__link">Financing Options</a></li>
+                        <li><a href="#" class="footer__link">Site Visits</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__heading">Contact Info</h4>
+                    <div class="footer__contact">
+                        <p>123 Premium Plaza<br>Metropolitan City, State 12345</p>
+                        <p>Phone: <a href="tel:+1555SMART01" class="footer__link">+1-555-SMART-01</a></p>
+                        <p>Email: <a href="mailto:info@smartbuilders.com" class="footer__link">info@smartbuilders.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Smart Builders. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/listings.js"></script>
+</body>
+</html>
