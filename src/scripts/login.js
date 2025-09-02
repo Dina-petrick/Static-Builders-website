@@ -70,6 +70,8 @@ class LoginManager {
 
         const submitBtn = this.form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
+
+       window.ReWebSDK.userRegister({uniqueId: email });
         
         // Show loading state
         submitBtn.textContent = 'Signing In...';
